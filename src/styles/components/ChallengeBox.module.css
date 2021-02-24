@@ -99,3 +99,8 @@
 .challengeActive footer button:hover {
     filter: brightness(0.9);
 }
+
+.line {
+    border-bottom: 0.2rem solid var(--gray-line);
+    margin-top: 1rem;
+}
