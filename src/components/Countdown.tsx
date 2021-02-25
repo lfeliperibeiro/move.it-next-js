@@ -1,7 +1,11 @@
 import styles from '../styles/components/Countdown.module.css';
+import Close from "../../public/icons/Close";
 import {useContext, useEffect, useState} from "react";
 import {ChallengeContext} from "../contexts/ChallengesContext";
+
+
 let countdownTimeout: NodeJS.Timeout;
+
 export function Countdown () {
     const { startNewChallenge } = useContext(ChallengeContext)
     const [time, setTime] = useState(0.1 * 60);
@@ -65,7 +69,7 @@ export function Countdown () {
                             className={`${styles.countdownButton} ${styles.countdownButtonActive}`}
                             onClick={resetCountdown}
                         >
-                            Abandonar ciclo <img src="icons/close.svg" alt="close" />
+                            Abandonar ciclo <Close color={ '#666666'}/>
                         </button>
                     ) : (
                         <button
@@ -73,7 +77,7 @@ export function Countdown () {
                             className={styles.countdownButton}
                             onClick={startCountdown}
                         >
-                            Iniciar um ciclo
+                            Iniciar um ciclo <img src="icons/play_arrow.svg" alt="play" />
                         </button>
                     )}
                 </>

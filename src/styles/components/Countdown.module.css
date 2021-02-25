@@ -62,9 +62,13 @@
     color: var(--title);
 }
 
-.countdownButtonActive:not(:disabled):hover {
+.countdownButtonActive:not(:disabled):hover{
     background: var(--red);
     color: var(--white);
+}
+
+.countdownButtonActive:not(:disabled):hover svg path{
+    fill: var(--white)
 }
 
 .countdownButton:disabled {
@@ -73,3 +77,4 @@
     cursor: not-allowed;
     border-bottom: 0.5rem solid var(--green);
 }
+
